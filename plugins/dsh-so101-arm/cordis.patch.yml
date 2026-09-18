@@ -1,0 +1,16 @@
+# dsh-so101-arm bundle patch.
+#
+# One Host-plane row. It publishes no service, so it needs no isolate realm: the row
+# contributes tools plus a same-origin HTTP route prefix (`/so101/`), and the DS101 bench is
+# a single physical resource driven by one operator, which is what makes the host plane the
+# right place for it rather than an agent preset.
+#
+# The browser half needs no row here. It travels with the package's `dsh.client` manifest,
+# and the DSH client module system loads it into the web profile on its own.
+#
+# The plugin expects `dsh-so101-arm:` settings for the workspace path, the Python
+# interpreter, and the motion switch; see README.md. Motion is OFF unless allowMotion is
+# set, so merely composing this row cannot energise a robot.
+- insert:
+    - id: so101-arm
+      name: 'dsh-so101-arm'

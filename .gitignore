@@ -1,0 +1,25 @@
+# Virtualenv: 205 MB of platform-specific binaries, rebuilt from requirements.
+.venv/
+
+# Bench captures. This is the big one -- camera frames and annotated scenes, over a
+# gigabyte, and every run of the bridge adds more. Nothing here is source.
+calib/captures/
+
+# Python bytecode.
+__pycache__/
+*.py[cod]
+
+# Machine-local output from the calibration and bridge scripts: run logs and the
+# timestamped backups that clamp_home.py / arm_zero.py write before rewriting a
+# calibration. The calibration JSONs themselves are kept, so a fresh clone has a
+# working default for --calibration.
+calib/out/argv.*
+calib/out/bridge_*.out
+calib/out/bridge_*.err
+*.bak-*
+*.log
+
+# OS and editor litter.
+Thumbs.db
+desktop.ini
+.DS_Store

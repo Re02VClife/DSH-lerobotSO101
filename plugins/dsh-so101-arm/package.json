@@ -1,0 +1,61 @@
+{
+  "name": "dsh-so101-arm",
+  "version": "0.1.0",
+  "description": "Drive a LeRobot SO-101 arm from a DSH agent: structured bench perception, IK planning, rate-limited motion and grasp feedback, over a local bridge that owns the hardware — plus a right-column console with the two camera feeds, joint sliders and the bench's configuration files.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./skill": "./skills/dsh-so101-arm/SKILL.md"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "skills/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "robotics",
+    "so-101",
+    "lerobot",
+    "robot-arm",
+    "embodied-ai"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "kind": "agent-tool",
+    "plane": "host",
+    "publishes": [],
+    "requires": [],
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "dsh-better-sidebar": ">=0.19.0",
+    "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "dsh-better-sidebar": {
+      "optional": true
+    }
+  }
+}

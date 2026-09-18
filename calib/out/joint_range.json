@@ -1,0 +1,48 @@
+{
+  "format": "ds101-so101-joint-range",
+  "version": 1,
+  "created": "2026-09-18T17:12:10",
+  "source": "http://127.0.0.1:8731",
+  "ticks_per_turn": 4096,
+  "samples": 1859,
+  "duration_s": 250.9,
+  "final": false,
+  "range": {
+    "shoulder_pan": {
+      "min": 1066,
+      "max": 2975,
+      "span": 1909,
+      "middle": 2020
+    },
+    "shoulder_lift": {
+      "min": 776,
+      "max": 3175,
+      "span": 2399,
+      "middle": 1975
+    },
+    "elbow_flex": {
+      "min": 786,
+      "max": 3004,
+      "span": 2218,
+      "middle": 1895
+    },
+    "wrist_flex": {
+      "min": 917,
+      "max": 3251,
+      "span": 2334,
+      "middle": 2084
+    },
+    "wrist_roll": {
+      "min": 124,
+      "max": 3962,
+      "span": 3838,
+      "middle": 2043
+    },
+    "gripper": {
+      "min": 1956,
+      "max": 3508,
+      "span": 1552,
+      "middle": 2732
+    }
+  }
+}

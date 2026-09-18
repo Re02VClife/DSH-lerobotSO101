@@ -1,0 +1,42 @@
+{
+  "T_base_cam": [
+    [
+      0.0,
+      0.9612616959383189,
+      -0.27563735581699916,
+      0.44
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -0.27563735581699916,
+      -0.9612616959383189,
+      0.51
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source": "mount_geometry_nominal",
+  "note": "Reconstructed from measured mount geometry, NOT a solved hand-eye calibration. Expect tens of mm of error. Replace with calib/extrinsics.py output when a board capture exists.",
+  "created": "2026-09-18T10:45:08+00:00",
+  "params": {
+    "table_z_mm": -115.0,
+    "camera_forward_mm": 440.0,
+    "camera_height_mm": 625.0,
+    "camera_pitch_deg": 16.0,
+    "up_hint": [
+      -1.0,
+      0.0,
+      0.0
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "format": "ds101-so101-calibration",
+  "version": 1,
+  "created": "2026-09-18T17:12:03",
+  "port": "COM10",
+  "ticks_per_turn": 4096,
+  "middle_ticks": {
+    "shoulder_pan": 2020,
+    "shoulder_lift": 1975,
+    "elbow_flex": 1895,
+    "wrist_flex": 2084,
+    "wrist_roll": 2043,
+    "gripper": 2732
+  },
+  "direction_sign": {
+    "shoulder_pan": 1,
+    "shoulder_lift": 1,
+    "elbow_flex": 1,
+    "wrist_flex": 1,
+    "wrist_roll": 1,
+    "gripper": 1
+  },
+  "joint_limits_deg": {
+    "shoulder_pan": [
+      96.061091,
+      263.844295
+    ],
+    "shoulder_lift": [
+      74.573438,
+      285.423048
+    ],
+    "elbow_flex": [
+      77.529229,
+      272.470635
+    ],
+    "wrist_flex": [
+      77.431489,
+      282.568207
+    ],
+    "wrist_roll": [
+      14.126897,
+      351.451116
+    ],
+    "gripper": [
+      161.751194,
+      298.157444
+    ]
+  },
+  "middle_pose_deg": {
+    "shoulder_pan": 179.9087476710785,
+    "shoulder_lift": 179.9542978157914,
+    "elbow_flex": 174.99993176129516,
+    "wrist_flex": 179.99984796050427,
+    "wrist_roll": 182.78900650720115,
+    "gripper": 229.9543192445754
+  },
+  "notes": "middle_ticks[j] is the raw Present_Position of joint j when the arm is at the middle of its range. Convert with: deg = mid_deg + (tick - middle_ticks) * 360/4096 * sign.  Valid only while the servo's own Homing_Offset stays unchanged.",
+  "homing_written": false,
+  "servo_models": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+  },
+  "home_ticks": {
+    "shoulder_pan": 2063,
+    "shoulder_lift": 850,
+    "elbow_flex": 2930,
+    "wrist_flex": 2927,
+    "wrist_roll": 2060,
+    "gripper": 2030
+  },
+  "home_deg": {
+    "shoulder_pan": 183.69,
+    "shoulder_lift": 81.073,
+    "elbow_flex": 265.971,
+    "wrist_flex": 254.09,
+    "wrist_roll": 184.28,
+    "gripper": 168.251
+  },
+  "range_source": {
+    "file": "calib/out/joint_range.json",
+    "recorded": "2026-09-18T17:12:03",
+    "samples": 1803,
+    "duration_s": 243.51,
+    "observed_span_ticks": {
+      "shoulder_pan": 1909,
+      "shoulder_lift": 2399,
+      "elbow_flex": 2218,
+      "wrist_flex": 2334,
+      "wrist_roll": 3838,
+      "gripper": 1552
+    },
+    "note": "middle_ticks is the middle of the OBSERVED travel, not a placed pose. home_ticks is a pose the operator recorded, not a computed one."
+  },
+  "home_source": {
+    "note": "home_deg/home_ticks were moved the minimum distance inside the motion envelope by calib/clamp_home.py; the operator's original pose sat closer to a hard limit than safety.limit_margin_deg allows, so arm_home could never reach it.",
+    "margin_deg": 6.0,
+    "pad_deg": 0.5,
+    "moved": [
+      "  shoulder_lift    75.54 ->   81.07  (+5.53 deg)",
+      "  elbow_flex      271.77 ->  265.97  (-5.80 deg)",
+      "  gripper         164.48 ->  168.25  (+3.77 deg)"
+    ],
+    "recorded": "2026-09-18T18:28:34"
+  }
+}
