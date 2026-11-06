@@ -521,7 +521,7 @@ if __name__ == "__main__":
     # Framing is built from MOUNT parameters on purpose: hand-built camera poses have
     # produced three separate sign errors in this project.
     checks = framing_check(
-        spec, (args.board_x_mm, args.board_y_mm, args.table_z_mm),
+        TABLE_BOARD, (args.board_x_mm, args.board_y_mm, args.table_z_mm),
         args.board_yaw_deg, args.board_pitch_deg, args.table_z_mm,
         args.camera_forward_mm, args.camera_height_mm, args.camera_pitch_deg,
     )
